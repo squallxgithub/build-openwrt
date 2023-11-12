@@ -6736,4 +6736,3 @@ CONFIG_PACKAGE_ubi-utils=y
 # CONFIG_PACKAGE_fontconfig is not set
 # end of Font-Utils
 # end of Xorg
-root@jie:~/openwrt# 
