@@ -9,6 +9,9 @@
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '$a src-git chinadns-ng https://github.com/immortalwrt/package.git' feeds.conf.default
+sed -i 'src-git luci_passwall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+sed -i 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages' feeds.conf.default
+
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
