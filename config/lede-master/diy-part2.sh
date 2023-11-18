@@ -47,13 +47,13 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 # sed -i "/DEFAULT_PACKAGES/ s/$/ pirania-app pirania ip6tables-mod-nat ipset shared-state-pirania uhttpd-mod-lua/" target/linux/armvirt/Makefile
 
 # 科学上网插件
-git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
-svn export https://github.com/haiibo/packages/trunk/luci-app-vssr package/luci-app-vssr
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
-svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+#git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+#svn export https://github.com/haiibo/packages/trunk/luci-app-vssr package/luci-app-vssr
+#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+#svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
+#svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
+#svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
