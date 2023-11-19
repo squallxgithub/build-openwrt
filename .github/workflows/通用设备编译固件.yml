@@ -145,7 +145,8 @@ jobs:
         run: cd openwrt/ && ./scripts/feeds install -a
       
       - name: Patch 新版Sing-box和hysteria，需golang版本1.20或者以上版本
-        run: |          
+        run: |  
+          cd openwrt/
           pushd feeds/packages/lang
           rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
           popd
