@@ -17,6 +17,9 @@ on:
         options:
           - openwrt-main
           - lede-master
+          - lede-master-512
+          - lede-master-2048
+          - lede-master-1024noramdisk
           - immortalwrt-master
           - Lienol-master
       
