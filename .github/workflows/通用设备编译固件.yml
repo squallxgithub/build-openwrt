@@ -144,13 +144,6 @@ jobs:
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
       
-      - name: Patch 新版Sing-box和hysteria，需golang版本1.20或者以上版本
-        run: |  
-          cd openwrt/
-          pushd feeds/packages/lang
-          rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
-          popd
-          
       - name: Load custom configuration
         run: |
           [[ -d "files" ]] && mv -f files openwrt/files
@@ -168,7 +161,13 @@ jobs:
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
           
-
+      - name: Patch 新版Sing-box和hysteria，需golang版本1.20或者以上版本
+        run: |  
+          cd openwrt/
+          pushd feeds/packages/lang
+          rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
+          popd
+          
       - name: Compile the OpenWrt
         id: compile
         run: |
